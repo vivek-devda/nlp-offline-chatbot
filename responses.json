@@ -1,6 +1,9 @@
 {
-    "hello": "Hello! How can I help you?",
-    "how are you": "I am fine, thank you.",
-    "what is your name": "I am your chatbot assistant.",
-    "bye": "Goodbye! Have a nice day."
+  "hello": "Hello! How can I help you?",
+  "hi": "Hi there!",
+  "how are you": "I am functioning properly.",
+  "what is your name": "I am an NLP chatbot.",
+  "bye": "Goodbye!",
+  "help": "I can answer basic questions.",
+  "who created you": "I was created by Vivek."
 }
