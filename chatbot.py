@@ -52,10 +52,13 @@ def chatbot():
   print("chatbot is ready! type 'exit' to quit.\n")
 
    while True:
-     user_input = input("you: ").lower()
-     if user_input == "exit":
-       print("Bot: Goodbye!")
-       break
+       user_input = input("you: ").lower()
+       if not user_input.strip():
+           print("Bot: Please enter something.")
+           continue
+           if user_input == "exit":
+               print("Bot: Goodbye!")
+               break
 
 user_input = preprocess(user_input)
 reply = get_response(user_input,responses)
