@@ -1,15 +1,18 @@
 import json
 import re
 from fuzzywuzzy import fuzz
+# This function compares user input with known phrases
+# using fuzzy string matching and returns the closest match.
 from pypdf import PdfReader
 
 #load responses
-def load_responses(file = "responses.json"):
-  try:
-    with open(file,'r') as f:
-      return json.load(f)
-  except:
-    return{}
+def load_responses(file="responses.json"):
+    try:
+        with open(file, 'r') as f:
+            return json.load(f)
+    except FileNotFoundError:
+        print("Error: responses.json file not found.")
+        return {}
 
 # extract txt from pdf
 def extract_pdf_text(path):
@@ -19,20 +22,20 @@ def extract_pdf_text(path):
     page_text = page.extract_text()
     if page_text:
       text += page_text + "\n"
-      return text
+  return text
 
 #clean text
 def preprocess(text):
   text = text.lower()
-  text = re.sub(r'p[^\w\s]','',text)
+  text = re.sub(r'[^\w\s]','',text)
   return text
 
 #find response
 def get_response(user_input, responses):
   best_match = None
-  best_Score = 0
+  best_score = 0
 
-for key in responses:
+  for key in responses:
   score = fuzz.ratio(user_input, key)
   if score > best_score:
     best_Score = score
@@ -48,11 +51,11 @@ def chatbot():
   responses = load_responses()
   print("chatbot is ready! type 'exit' to quit.\n")
 
-while True:
-  user_input = input("you: ").lower()
-  if user_input == "exit":
-    print("Bot: Goodbye!")
-    break
+   while True:
+     user_input = input("you: ").lower()
+     if user_input == "exit":
+       print("Bot: Goodbye!")
+       break
 
 user_input = preprocess(user_input)
 reply = get_response(user_input,responses)
