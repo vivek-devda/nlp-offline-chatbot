@@ -27,3 +27,6 @@ def chatbot():
         else:
             reply = get_response(user_input, responses)
             print("Bot:", reply)
+
+if __name__ == "__main__":
+    chatbot()
