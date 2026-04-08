@@ -50,7 +50,7 @@ This chatbot solves that by:
 ---
 
 ## 📂 Project Structure
-
+```
 chatbot_project/
 ├── chatbot.py
 ├── responses.json
