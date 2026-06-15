@@ -6,9 +6,7 @@ Local-first NLP chatbot with intent recognition, fuzzy matching, and zero API co
 
 ## 🚀 Overview
 
-This project implements a rule-based conversational assistant that identifies user intent through fuzzy string matching and returns predefined responses from a structured JSON knowledge base.
-
-The chatbot processes user input locally, making it suitable for learning NLP fundamentals and building low-resource conversational systems.
+A local-first NLP chatbot that performs intent recognition through text preprocessing, fuzzy string matching, and a structured JSON knowledge base. Built entirely in Python without external APIs or cloud services, the system demonstrates the foundations of conversational AI while enabling low-latency, zero API-cost interactions.
 
 ---
 
