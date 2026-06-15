@@ -1,6 +1,6 @@
 # 🧠 Offline NLP Chatbot (Python)
 
-A lightweight NLP-based chatbot that runs entirely offline using text preprocessing and fuzzy intent matching. The project demonstrates how conversational systems can be built without cloud APIs, external AI services, or internet connectivity.
+Local-first NLP chatbot with intent recognition, fuzzy matching, and zero API costs.
 
 ---
 
